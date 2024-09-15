@@ -25,13 +25,19 @@ const Navbar = () => {
         {/* Right Side: Menu Items (Desktop) */}
         <ul className="hidden md:flex space-x-8 text-white text-lg font-medium">
           <li className="hover:text-gray-200 transition duration-300 cursor-pointer border-b-2 border-transparent hover:border-gray-200 pb-1">
+          <a href="#specs" className="hover:text-gray-200 transition duration-300 cursor-pointer">
             Specs
+          </a>
           </li>
           <li className="hover:text-gray-200 transition duration-300 cursor-pointer border-b-2 border-transparent hover:border-gray-200 pb-1">
+            <a href="#gallery" className="hover:text-gray-200 transition duration-300 cursor-pointer">
             Gallery
+            </a>
           </li>
           <li className="hover:text-gray-200 transition duration-300 cursor-pointer border-b-2 border-transparent hover:border-gray-200 pb-1">
+            <a href="#social" className="hover:text-gray-200 transition duration-300 cursor-pointer">
             Social
+            </a>
           </li>
         </ul>
 

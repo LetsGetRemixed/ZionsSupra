@@ -2,7 +2,7 @@ import React from 'react';
 
 const Social = () => {
   return (
-    <section
+    <section id="social"
       className="py-16 px-8 bg-gradient-to-br from-purple-500 via-pink-500 to-yellow-500 border-t-4"
     >
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
@@ -15,7 +15,7 @@ const Social = () => {
             Stay updated with the latest posts. Follow us on Instagram for more!
           </p>
           <a
-  href="https://www.instagram.com/zions.supra?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+  href="https://www.instagram.com/zions.supra/"
   target="_blank"
   rel="noopener noreferrer"
   className="mt-6 inline-block border-2 border-white bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 text-white px-8 py-3 rounded-full text-lg font-header hover:bg-gradient-to-l hover:from-pink-500 hover:via-yellow-500 hover:to-purple-500 transition duration-300 shadow-lg hover:shadow-xl"
@@ -29,7 +29,7 @@ const Social = () => {
           <img
             src="/images/instagram.png" // Replace with the actual path to your Instagram image
             alt="Instagram Account"
-            className="w-72 h-auto object-cover rounded-lg shadow-lg border-2 border-white"
+            className="w-auto h-72 object-cover rounded-lg shadow-lg border-2 border-white"
           />
         </div>
       </div>

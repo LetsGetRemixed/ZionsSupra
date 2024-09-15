@@ -69,7 +69,7 @@ const Specs = () => {
     };
   
     return (
-        <section
+        <section id="specs"
   className="relative h-screen text-black overflow-hidden border-t-4"
   style={{
     backgroundImage: `url('/images/sky.jpg')`,
