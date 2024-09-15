@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Navbar from './Navbar';
 import Specs from './Specs';
+import Social from './Social';
 const Home = () => {
   return (
     <div>
@@ -9,7 +10,7 @@ const Home = () => {
       <Navbar />
       <Header />
       <Specs />
-        Home
+      <Social />
     </div>
   );
 };
