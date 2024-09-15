@@ -39,7 +39,7 @@ const Gallery = () => {
             <img
               src={`/images/${image}`}
               alt={`Car ${index + 1}`}
-              className="w-full h-64 object-cover transition-transform duration-300 transform hover:scale-105"
+              className="w-full h-64 object-cover transition-transform duration-300 transform hover:scale-105 border-2 border-gray-400"
             />
           </div>
         ))}

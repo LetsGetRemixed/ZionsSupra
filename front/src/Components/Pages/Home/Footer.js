@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-10 border-t-4 border-white font-body">
+    <footer className="bg-gray-900 text-white py-10 border-t-4 border-white font-body">
       <div className="container mx-auto px-4">
         {/* Top Section: Logo, Navigation Links, and Instagram */}
         <div className="flex flex-col md:flex-row justify-between items-center">
