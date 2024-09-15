@@ -14,11 +14,12 @@
 			  white: '#ffffff',
 			},
 			fontFamily: {
-			  header: ['"Dancing Script"', 'cursive'],
-			  body: ['"Roboto"', 'sans-serif'],
+				logo: ['"Dancing Script"', 'cursive'], // For the logo
+				header: ['"Bodoni Moda"', 'serif'], // For the headers
+				body: ['"Lora"', 'serif'], // For the body text
+			  },
 			},
 		  },
-		},
 	  plugins: [],
 	};
 	

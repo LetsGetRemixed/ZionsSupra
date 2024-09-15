@@ -8,7 +8,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="font-body bg-gradient-to-b from-red-500 via-red-600 to-red-900 border-b-4 border-red-800 p-4 shadow-lg sticky top-0 z-50">
+    <nav className="font-header bg-transparent p-4 absolute top-0 left-0 w-full z-50">
       <div className="container mx-auto flex items-center justify-between">
         {/* Left Side: Logo and Title */}
         <div className="flex items-center">
@@ -17,7 +17,7 @@ const Navbar = () => {
             alt="Tire Logo"
             className="w-12 h-12 object-contain rounded-full"
           />
-          <span className="text-white text-2xl font-header md:text-3xl font-bold ml-3">
+          <span className="text-white text-2xl font-logo md:text-3xl font-bold ml-3">
             Zions Supra
           </span>
         </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
 
       {/* Mobile Menu (Toggle) */}
       {isOpen && (
-        <ul className="md:hidden bg-red-600 text-white text-lg font-medium flex flex-col space-y-2 mt-4 p-4 border-t border-red-800">
+        <ul className="md:hidden bg-transparent text-white text-lg font-medium flex flex-col space-y-2 mt-4 p-4 border-t">
           <li className="hover:text-gray-200 transition duration-300 cursor-pointer">
             Specs
           </li>
@@ -65,5 +65,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
