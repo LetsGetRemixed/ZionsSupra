@@ -19,21 +19,21 @@ const specs = [
     name: 'Tomei Dual Exit Exhaust',
     description:
       'Delivers a deep, resonant exhaust note with optimized exhaust flow.',
-    imgSrc: '/images/exhaust.png',
+    imgSrc: '/images/Exhaust.png',
     price: '$1700',
   },
   {
     name: 'HKS SQV4 Blow Off Valve',
     description:
       'Prevents compressor surge while delivering that signature blow-off sound.',
-    imgSrc: '/images/valve.png',
+    imgSrc: '/images/Valve.png',
     price: '$250',
   },
   {
     name: 'VR Performance Titanium Chargepipe',
     description:
       'A stronger and lighter alternative, improving turbo response and durability.',
-    imgSrc: '/images/chargepipe.png',
+    imgSrc: '/images/Chargepipe.png',
     price: '$600',
     
   },
@@ -41,14 +41,14 @@ const specs = [
     name: 'Titan 7 TS5 Forged Wheels',
     description:
       'Lightweight and durable forged wheels for improved performance and style.',
-    imgSrc: '/images/wheels.png',
+    imgSrc: '/images/Wheels.png',
     price: '$2400',
   },
   {
     name: 'Streethunter Carbon Fiber Spoiler',
     description:
       'Adds aggressive styling and aerodynamic downforce for improved stability at high speeds.',
-    imgSrc: '/images/spoiler.png',
+    imgSrc: '/images/Spoiler.png',
     price: '$1400',
   },
 ];
@@ -67,6 +67,10 @@ const Specs = () => {
         prevIndex === 0 ? specs.length - 1 : prevIndex - 1
       );
     };
+
+    const goToSlide = (index) => {
+      setCurrentIndex(index);
+    };
   
     return (
         <section id="specs"
@@ -77,21 +81,39 @@ const Specs = () => {
     backgroundPosition: 'center',
   }}
 >
-        {/* Navigation Arrows */}
-        <button
-          onClick={goToPrev}
-          className="absolute left-8 top-1/2 transform -translate-y-1/2 text-3xl z-10 hover:text-red-500 transition duration-300"
-        >
-          &#8249;
-        </button>
-  
-        <button
-          onClick={goToNext}
-          className="absolute right-8 top-1/2 transform -translate-y-1/2 text-3xl z-10 hover:text-red-500 transition duration-300"
-        >
-          &#8250;
-        </button>
-  
+       {/* Navigation Arrows for Larger Screens */}
+<button
+  onClick={goToPrev}
+  className="absolute left-8 top-1/2 transform -translate-y-1/2 text-6xl z-10 bg-black bg-opacity-50 text-white p-4 rounded-full hover:bg-red-500 hover:text-white transition duration-300 md:block hidden"
+>
+  &#8249;
+</button>
+
+<button
+  onClick={goToNext}
+  className="absolute right-8 top-1/2 transform -translate-y-1/2 text-6xl z-10 bg-black bg-opacity-50 text-white p-4 rounded-full hover:bg-red-500 hover:text-white transition duration-300 md:block hidden"
+>
+  &#8250;
+</button>
+
+
+
+{/* Navigation Arrows for Small Screens */}
+<button
+  onClick={goToPrev}
+  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-3xl z-10 bg-transparent text-black p-1 hover:text-red-500 transition duration-300 md:hidden"
+>
+  &#8249;
+</button>
+
+<button
+  onClick={goToNext}
+  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-3xl z-10 bg-transparent text-black p-1 hover:text-red-500 transition duration-300 md:hidden"
+>
+  &#8250;
+</button>
+
+          
         {/* Main Part Display */}
         <div className="flex flex-col items-center justify-center h-full space-y-8">
           {/* Image */}
@@ -109,17 +131,19 @@ const Specs = () => {
           </div>
   
           {/* Dots Navigation */}
-          <div className="flex space-x-2">
-            {specs.map((_, index) => (
-              <div
-                key={index}
-                className={`w-4 h-4 rounded-full ${
-                  index === currentIndex ? 'bg-red-500' : 'bg-gray-500'
-                }`}
-              />
-            ))}
-          </div>
+        <div className="flex space-x-2">
+          {specs.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => goToSlide(index)} // Make dots clickable
+              className={`w-4 h-4 rounded-full cursor-pointer ${
+                index === currentIndex ? 'bg-red-500' : 'bg-gray-500'
+              }`}
+            />
+          ))}
         </div>
+      </div>
+       
       </section>
     );
   };
